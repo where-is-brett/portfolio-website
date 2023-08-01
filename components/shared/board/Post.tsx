@@ -23,8 +23,8 @@ const Post = ({
                 <h1 className="text-xl md:text-2xl text font-bold capitalize font-raleway">
                     {title}
                 </h1>
-                {paragraphs.map((paragraph: string, index: number) =>
-                    <p>{paragraph}</p>
+                {paragraphs.map((paragraph: string, key: number) =>
+                    <p key={key}>{paragraph}</p>
                 )}
                 <div className='w-full'>
                     {imageURLs && (

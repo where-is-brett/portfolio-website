@@ -54,7 +54,7 @@ const ContactForm = () => {
                 {afterSubmit === ''
                     ?
                     <form name="contact-form" id="contact-form" method="post" onSubmit={handleSubmit} className="leading-8">
-                        <h2 className="mb-4 p-0 justify-start text-4xl">Let's talk!</h2>
+                        <h2 className="mb-4 p-0 justify-start text-4xl">{`Let's talk!`}</h2>
                         <label htmlFor="name">NAME</label>
                         <input
                             type="text"

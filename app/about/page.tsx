@@ -21,9 +21,9 @@ const Page = () => {
                 <div className="space-y-8 flex flex-col items-center">
                     <AnimatedWords title="Welcome" titleClasses="uppercase font-bold text-5xl md:text-7xl lg:text-8xl" />
                     <p className="">
-                        I'm Brett, a dedicated front-end engineer with a keen eye for detail and a love for all things web.
+                        {`I'm Brett, a dedicated front-end engineer with a keen eye for detail and a love for all things web.
                         With a firm belief in the power of code to shape the digital landscape,
-                        I take pride in crafting beautiful and functional web applications.
+                        I take pride in crafting beautiful and functional web applications.`}
                     </p>
                 </div>
 
