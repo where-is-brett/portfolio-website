@@ -12,8 +12,8 @@ const Grid = ({ gridItems }: {gridItems: GridItemPayload[]}) => {
                     <div key={key} className="flex justify-start items-start gap-8">
                         <Image src={item.icon} alt={item.title} className="my-auto flex-shrink-0 w-16" />
                         <div>
-                            <h3 className="font-bold text-2xl mb-2 font-raleway">{item.title}</h3>
-                            <p className="text-xl">{item.description}</p>
+                            <h3 className="font-bold text-xl md:text-2xl mb-2 font-raleway">{item.title}</h3>
+                            <p className="md:text-xl">{item.description}</p>
                         </div>
                     </div>
                 )

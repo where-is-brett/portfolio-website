@@ -15,7 +15,7 @@ const Page = () => {
 
     return (
         <>
-            <div className="space-y-16 text-xl md:text-2xl">
+            <div className="space-y-16 text-base md:text-xl lg:text-2xl">
 
 
                 <div className="space-y-8 flex flex-col items-center">
@@ -56,7 +56,7 @@ const Page = () => {
 
                 {/* TECH STACK */}
                 <div className="space-y-10 flex flex-col items-center">
-                    <AnimatedWords title="Ahead of the Curve" titleClasses="uppercase font-bold text-5xl md:text-6xl lg:text-7xl xl:text-8xl" />
+                    <AnimatedWords title="Ahead of the Curve" titleClasses="uppercase font-bold text-4xl md:text-6xl lg:text-7xl xl:text-8xl" />
                     <p>I swear by the power of Next.js and Tailwind CSS to streamline my front-end workflow. These tools, coupled with an eye for design, allow me to create visually appealing and highly functional web applications.</p>
                     <ScrollFadeIn />
                 </div>
@@ -64,7 +64,7 @@ const Page = () => {
 
                 {/* Projects */}
                 <div className="space-y-10 flex flex-col items-center">
-                    <AnimatedWords title="Selected Projects" titleClasses="uppercase font-bold text-5xl md:text-6xl lg:text-7xl xl:text-8xl" />
+                    <AnimatedWords title="Selected Projects" titleClasses="uppercase font-bold text-4xl md:text-6xl lg:text-7xl xl:text-8xl" />
                     <Board posts={projects} />
                 </div>
 

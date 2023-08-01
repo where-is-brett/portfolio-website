@@ -5,7 +5,7 @@ const Board = ({ posts }: { posts: PostPayload[] }) => {
 
     return (
         <div
-            className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-4 place-items-center items-start justify-center"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-4 place-items-center items-start justify-center"
         >
             {posts.map((post, key) => <Post key={key} title={post.title} body={post.body} imageURLs={post.imageURLs} link={post.link} />)}
         </div>
