@@ -19,7 +19,7 @@ const Post = ({
 
     return (
         <>
-            <div className="border-2 border-border p-6 space-y-4 w-full bg-bg-secondary text-lg md:text-xl">
+            <div className="border-2 border-border p-6 space-y-4 w-full bg-bg-secondary ">
                 <h1 className="text-xl md:text-2xl text font-bold capitalize font-raleway">
                     {title}
                 </h1>

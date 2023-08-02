@@ -45,8 +45,8 @@ const Carousel: React.FC<CarouselProps> = ({ imageURLs }) => {
     };
 
     return (
-        <div className="space-y-4">
-            <div className="relative h-96 xl:h-[500px] w-full overflow-hidden">
+        <div className="space-y-4 z-0">
+            <div className="z-0 relative h-96 md:h-[512px] w-full overflow-hidden">
                 <AnimatePresence initial={false} custom={direction}>
                     <motion.div
                         key={imageCount}

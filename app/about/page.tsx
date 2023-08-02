@@ -8,6 +8,7 @@ import { riseWithFade } from "@/utils/animations";
 import { services, projects } from "@/data/about";
 import Grid from "@/components/shared/grid/Grid";
 import ScrollFadeIn from "@/components/shared/ScrollFadeIn";
+import { ScrollAnimation } from "@/components/shared/ScrollAnimation";
 
 
 
@@ -15,20 +16,15 @@ const Page = () => {
 
     return (
         <>
-            <div className="space-y-16 text-base md:text-xl lg:text-2xl">
-
+            <div className="space-y-16 text-base lg:text-lg xl:text-xl">
 
                 <div className="space-y-8 flex flex-col items-center">
-                    <AnimatedWords title="Welcome" titleClasses="uppercase font-bold text-5xl md:text-7xl lg:text-8xl" />
+                    <AnimatedWords title="Welcome" titleClasses="uppercase font-bold text-5xl md:text-7xl" />
                     <p className="">
                         {`I'm Brett, a dedicated front-end engineer with a keen eye for detail and a love for all things web.
-                        With a firm belief in the power of code to shape the digital landscape,
-                        I take pride in crafting beautiful and functional web applications.`}
+                        I specialise in crafting beautiful jamstack websites where business logic is decoupled from the experience layer.`}
                     </p>
                 </div>
-
-
-
 
                 {/* Introduction */}
                 <motion.div
@@ -49,22 +45,25 @@ const Page = () => {
 
                 {/* Services */}
                 <div className="space-y-10 flex flex-col items-center">
-                    <AnimatedWords title="What I Do" titleClasses="uppercase font-bold text-5xl md:text-7xl lg:text-8xl" />
+                    <AnimatedWords title="What I Do" titleClasses="uppercase font-bold text-5xl md:text-7xl" />
                     <Grid gridItems={services} />
                 </div>
 
 
                 {/* TECH STACK */}
                 <div className="space-y-10 flex flex-col items-center">
-                    <AnimatedWords title="Ahead of the Curve" titleClasses="uppercase font-bold text-4xl md:text-6xl lg:text-7xl xl:text-8xl" />
-                    <p>I swear by the power of Next.js and Tailwind CSS to streamline my front-end workflow. These tools, coupled with an eye for design, allow me to create visually appealing and highly functional web applications.</p>
-                    <ScrollFadeIn />
+                    <AnimatedWords title="Ahead of the Curve" titleClasses="uppercase font-bold text-4xl md:text-6xl lg:text-7xl" />
+                    <p>I swear by the power of Next.js and Sanity to build scalable and highly maintainable websites.</p>
+                    <div className="px-6">
+                        <ScrollAnimation />
+                    </div>
+
                 </div>
 
 
                 {/* Projects */}
                 <div className="space-y-10 flex flex-col items-center">
-                    <AnimatedWords title="Selected Projects" titleClasses="uppercase font-bold text-4xl md:text-6xl lg:text-7xl xl:text-8xl" />
+                    <AnimatedWords title="Selected Projects" titleClasses="uppercase font-bold text-4xl md:text-6xl lg:text-7xl" />
                     <Board posts={projects} />
                 </div>
 

@@ -28,9 +28,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={`${archivo.className} ${raleway.variable} ${archivo.variable}`}>
         <nav>
-          <Navbar />
+          <Navbar breakpoint={1024} />
         </nav>
-        <main className='mt-14 md:mt-0 md:mb-14 p-12 md:p-16'>
+        <main className='mt-14 lg:mt-0 lg:mb-14 p-5 lg:p-10'>
           {children}
         </main>
       </body>
