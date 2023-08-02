@@ -62,7 +62,8 @@ const ScrollFadeIn = (
                 exit="hide"
                 variants={introHeaderVariants}>
 
-                <Image src={ReactIcon} alt="React icon" className="h-12 w-36 md:h-16 md:w-48" />
+                
+                <Image src={SanityIcon} alt="Sanity icon" className="h-12 w-36 md:h-16 md:w-48" />
                 <Image src={NextIcon} alt="Next icon" className="h-12 w-36 md:h-16 md:w-48" />
                 
             </motion.header>
@@ -73,8 +74,10 @@ const ScrollFadeIn = (
                 exit="hide"
                 variants={introPictureVariants}>
 
-                <Image src={SanityIcon} alt="Sanity icon" className="h-12 w-36 md:h-16 md:w-48" />
+              
                 <Image src={VercelIcon} alt="Vercel icon" className="h-12 w-36 md:h-16 md:w-48" />
+                <Image src={AWSIcon} alt="AWS icon" className="h-12 w-36 md:h-16 md:w-48" />
+                
                 
             </motion.div>
         </div>

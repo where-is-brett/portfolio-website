@@ -5,12 +5,14 @@ import Image from "next/image"
 
 const Grid = ({ gridItems }: { gridItems: GridItemPayload[] }) => {
 
+    const isSmallScreen = useMediaQuery(1024);
+
     return (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-8 gap-x-14">
             {gridItems.map((item: GridItemPayload, key: number) => {
 
                 return (
-                    useMediaQuery(1024)
+                    isSmallScreen
                         ?
                         <div key={key} className="flex flex-col justify-start items-start gap-8">
                             <div className="flex items-center gap-4">

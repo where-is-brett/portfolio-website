@@ -8,23 +8,22 @@ export const services: GridItemPayload[] = [
     {
         icon: MarketingIcon,
         title: "Marketing Websites",
-        description: `Create captivating and results-driven marketing websites that engage visitors and promote your brand's message. Leveraging Next.js and Sanity, I ensure fast-loading, SEO-friendly, and visually stunning websites that leave a lasting impression on your audience.`,
+        description: `Captivating and results-driven marketing websites that engage visitors and promote your brand's message. I focus on fast-loading, SEO-friendly, and visually stunning websites that leave a lasting impression on your audience.`,
     },
     {
         icon: DashboardIcon,
         title: "Data Dashboards",
-        description: `Develop data-rich and interactive dashboards that provide valuable insights at a glance. Utilising Next.js and Sanity, I design user-friendly data visualisation interfaces, empowering you to make data-driven decisions efficiently and effectively.`,
+        description: `Data-rich and interactive dashboards that provide valuable insights. I design user-friendly data visualisation interfaces, empowering you to make data-driven decisions efficiently and effectively.`,
     },
     {
         icon: EditorialIcon,
         title: "Editorial Websites",
-        description: `Craft elegant and content-focused editorial websites that captivate readers.
-        With Next.js and Sanity, I create seamless reading experiences, optimised for performance, while ensuring easy content management for publishers.`,
+        description: `Elegant and content-focused editorial websites that captivate readers. I create seamless reading experiences, optimised for performance, while ensuring easy content management for publishers.`,
     },
     {
         icon: EcommerceIcon,
         title: "API-Based Ecommerce",
-        description: `Build feature-rich and scalable ecommerce platforms using Next.js and Sanity. By integrating APIs and leveraging modern web technologies, I create seamless shopping experiences that drive conversions and enhance user satisfaction.`,
+        description: `Feature-rich and scalable storefront with your choice of ecommerce platform. I create seamless shopping experiences that drive conversions and enhance user satisfaction.`,
     },
 ]
 

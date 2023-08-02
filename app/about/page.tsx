@@ -9,6 +9,7 @@ import { services, projects } from "@/data/about";
 import Grid from "@/components/shared/grid/Grid";
 import ScrollFadeIn from "@/components/shared/ScrollFadeIn";
 import { ScrollAnimation } from "@/components/shared/ScrollAnimation";
+import useMediaQuery from "@/utils/useMediaQuery";
 
 
 
@@ -22,7 +23,7 @@ const Page = () => {
                     <AnimatedWords title="Welcome" titleClasses="uppercase font-bold text-5xl md:text-7xl" />
                     <p className="">
                         {`I'm Brett, a dedicated front-end engineer with a keen eye for detail and a love for all things web.
-                        I specialise in crafting beautiful jamstack websites where business logic is decoupled from the experience layer.`}
+                        I specialise in crafting beautiful jamstack websites where business logic is decoupled from web experience.`}
                     </p>
                 </div>
 
@@ -55,7 +56,12 @@ const Page = () => {
                     <AnimatedWords title="Ahead of the Curve" titleClasses="uppercase font-bold text-4xl md:text-6xl lg:text-7xl" />
                     <p>I swear by the power of Next.js and Sanity to build scalable and highly maintainable websites.</p>
                     <div className="px-6">
-                        <ScrollAnimation />
+                        {useMediaQuery(1024)
+                            ? <ScrollAnimation />
+                            : <ScrollFadeIn />
+
+                        }
+
                     </div>
 
                 </div>

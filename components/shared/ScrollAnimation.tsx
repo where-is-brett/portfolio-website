@@ -39,7 +39,7 @@ function useParallax(value: MotionValue<number>, start: number, end: number) {
     return useTransform(value, [0, 1], [start, end]);
 }
 
-function reverseParallax(value: MotionValue<number>, start: number, end: number) {
+function useReverseParallax(value: MotionValue<number>, start: number, end: number) {
     return useTransform(useParallax(value, start, end), (v) => -v);
 }
 
@@ -52,8 +52,8 @@ export function ScrollAnimation() {
 
     const x1 = useParallax(scrollYProgress, -700, 400);
     const x2 = useParallax(scrollYProgress, -700, 400);
-    const x3 = reverseParallax(scrollYProgress, -700, 400);
-    const x4 = reverseParallax(scrollYProgress, -700, 400);
+    const x3 = useReverseParallax(scrollYProgress, -700, 400);
+    const x4 = useReverseParallax(scrollYProgress, -700, 400);
 
 
     return (

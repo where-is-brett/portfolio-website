@@ -35,7 +35,7 @@ const Navbar = ({ breakpoint }: {breakpoint: number}) => {
             // window.removeEventListener('resize', handleResize);
             window.removeEventListener('click', handleOutsideClick);
         };
-    }, []);
+    }, [breakpoint]);
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const handleMenuClick = () => {
