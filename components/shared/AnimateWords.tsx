@@ -29,7 +29,7 @@ const AnimatedWords: React.FC<AnimatedWordsProps> = ({ title, titleClasses = "" 
           <motion.span
             className={`inline-block overflow-hidden font-raleway ${titleClasses}`}
             initial={{ y: 100 }} // Start each word outside the viewport
-            animate={inView ? { y: 0 } : { y: 100 }} // Animate the word based on whether it's in view or not
+            animate={{ y: 0 }} // Animate the word based on whether it's in view or not
             transition={{
               ease: [0.6, 0.01, 0.05, 0.95],
               duration: 1,

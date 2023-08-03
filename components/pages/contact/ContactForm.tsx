@@ -49,12 +49,12 @@ const ContactForm = () => {
 
 
     return (
-        <div className="w-full flex flex-wrap justify-center items-center border-border border-2 md:min-w-[48vw] md:mb-12 md:border-0 md:border-r">
-            <div className="min-w-[60vw] max-w-[80vw] px-0 py-16 md:min-w-[30vw] md:p-0">
+        <div className="w-full h-screen flex flex-wrap justify-center items-center border-border border-2 lg:min-w-[48vw] lg:mb-12 lg:border-0 lg:border-r">
+            <div className="min-w-[60vw] max-w-[80vw] px-0 py-16 lg:min-w-[30vw] lg:p-0 ">
                 {afterSubmit === ''
                     ?
                     <form name="contact-form" id="contact-form" method="post" onSubmit={handleSubmit} className="leading-8">
-                        <h2 className="mb-4 p-0 justify-start text-4xl">{`Let's talk!`}</h2>
+                        <h2 className="mb-4 p-0 justify-start text-4xl font-bold font-bergen">{`Let's talk!`}</h2>
                         <label htmlFor="name">NAME</label>
                         <input
                             type="text"
@@ -63,7 +63,7 @@ const ContactForm = () => {
                             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                             required
                             disabled={submitting}
-                            className="block w-full py-2 px-3 border-2 border-border mb-2 hover:border-border-hover focus:border-border-selected outline-none"
+                            className="block w-full py-1 px-3 border-2 border-border mb-2 hover:border-border-hover focus:border-border-selected outline-none"
                         />
                         <label htmlFor="email">EMAIL</label>
                         <input
@@ -73,13 +73,13 @@ const ContactForm = () => {
                             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                             required
                             disabled={submitting}
-                            className="block w-full py-2 px-3 border-2 border-border mb-2 hover:border-border-hover focus:border-border-selected outline-none"
+                            className="block w-full py-1 px-3 border-2 border-border mb-2 hover:border-border-hover focus:border-border-selected outline-none"
                         />
                         <label htmlFor="message">MESSAGE</label>
                         <textarea
                             placeholder=""
                             name="message"
-                            className="block w-full py-2 px-3 border-2 border-border max-h-[40vh] h-[30vh] overflow-y-auto mb-4 md:max-w-[45vw] hover:border-border-hover focus:border-border-selected outline-none"
+                            className="block w-full py-1 px-3 border-2 border-border max-h-[40vh] h-[30vh] overflow-y-auto mb-4 lg:max-w-[45vw] hover:border-border-hover focus:border-border-selected outline-none"
                             id="message"
                             value={formData.message}
                             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -103,7 +103,7 @@ const ContactForm = () => {
                     :
                     <div className="min-h-[50vh] flex items-center" role={afterSubmit}>
                         {afterSubmit === 'success'
-                            ? <p className="p-16 items-center">Thank you for reaching out! We have received your message and will get back to you shortly.</p>
+                            ? <p className="p-16 items-center">Thank you for reaching out! Your message have been submitted successfully. I will get back to you shortly.</p>
                             : <p className="p-16">Oops! An error occurred while submitting the form. Please try again later.</p>
                         }
                     </div>

@@ -1,79 +1,94 @@
 'use client'
-import { Balancer } from "react-wrap-balancer";
 import Board from "@/components/shared/board/Board";
-import AnimatedWords from "@/components/shared/AnimateWords";
-import { motion } from "framer-motion";
-import { riseWithFade } from "@/utils/animations";
-
+import { FadeIn, FadeInStagger } from '@/components/shared/FadeIn'
 import { services, projects } from "@/data/about";
 import Grid from "@/components/shared/grid/Grid";
-import ScrollFadeIn from "@/components/shared/ScrollFadeIn";
-import { ScrollAnimation } from "@/components/shared/ScrollAnimation";
-import useMediaQuery from "@/utils/useMediaQuery";
+import { OpacityTransitionImage } from "@/components/shared/OpacityTransitionImage"
+import profile from "@/public/images/profile.jpg"
+import Balancer from "react-wrap-balancer";
 
 
+const snapClasses = `lg:h-[100vh] lg:snap-center lg:snap-always`;
 
 const Page = () => {
 
     return (
         <>
-            <div className="space-y-16 text-base lg:text-lg xl:text-xl">
+            <div className="space-y-20 text-base lg:text-lg">
 
-                <div className="space-y-8 flex flex-col items-center">
-                    <AnimatedWords title="Welcome" titleClasses="uppercase font-bold text-5xl md:text-7xl" />
-                    <p className="">
-                        {`I'm Brett, a dedicated front-end engineer with a keen eye for detail and a love for all things web.
-                        I specialise in crafting beautiful jamstack websites where business logic is decoupled from web experience.`}
-                    </p>
+                <div className={`w-full h-[100vh] flex flex-col justify-center ${snapClasses}`}>
+                    <FadeInStagger className="space-y-16">
+                        <FadeIn>
+                            <svg width="100%" height="100%" viewBox="0 0 180 20" className="">
+                                <text x="50%" y="65%" textAnchor="middle" alignmentBaseline="middle" className="font-bergen font-bold uppercase">
+                                    Hello,
+                                </text>
+                            </svg>
+                        </FadeIn>
+                        <FadeIn>
+                            <svg width="100%" height="100%" viewBox="0 0 180 20" className="">
+                                <text x="50%" y="65%" textAnchor="middle" alignmentBaseline="middle" className="font-bergen font-bold uppercase">
+                                    {`I'm Brett`}
+                                </text>
+                            </svg>
+                        </FadeIn>
+                    </FadeInStagger>
                 </div>
 
-                {/* Introduction */}
-                <motion.div
-                    className="space-y-8"
-                    initial="hide"
-                    whileInView="show"
-                    exit="hide"
-                    animate="animate"
-                    variants={riseWithFade}
-                >
-                    <p className=""><Balancer ratio={0.2}>
-                        My journey in the world of web began with the drive to create user-centric experiences that bridge the gap between design and functionality.
-                        With a background in physics, I bring a unique perspective to problem-solving and crafting intuitive user interfaces.
-                        My mission is to leverage cutting-edge technologies to create elegant, scalable web solutions.
-                    </Balancer></p>
-                </motion.div>
-
+                <div className={`h-[100vh] flex flex-col lg:flex-row justify-center items-center gap-16 lg:px-20 ${snapClasses}`}>
+                    <OpacityTransitionImage src={profile} alt={"Brett's profile picture"}
+                        className="border-2 border-border rounded-full w-full max-w-[50vw] max-h-[40vh] lg:max-w-[45vw] lg:max-h-[60vh] z-0"
+                    />
+                    <FadeIn>
+                        <p className="leading-8 font-medium">
+                            <Balancer ratio={0.7}>
+                                My journey began with the drive to create user-centric experiences that bridge the gap between design and functionality.
+                                I specialise in buidling jamstack websites where business logic is decoupled from web experience.
+                            </Balancer>
+                        </p>
+                    </FadeIn>
+                </div>
 
                 {/* Services */}
-                <div className="space-y-10 flex flex-col items-center">
-                    <AnimatedWords title="What I Do" titleClasses="uppercase font-bold text-5xl md:text-7xl" />
-                    <Grid gridItems={services} />
-                </div>
-
-
-                {/* TECH STACK */}
-                <div className="space-y-10 flex flex-col items-center">
-                    <AnimatedWords title="Ahead of the Curve" titleClasses="uppercase font-bold text-4xl md:text-6xl lg:text-7xl" />
-                    <p>I swear by the power of Next.js and Sanity to build scalable and highly maintainable websites.</p>
-                    <div className="px-6">
-                        {useMediaQuery(1024)
-                            ? <ScrollAnimation />
-                            : <ScrollFadeIn />
-
-                        }
-
+                <div className="space-y-12">
+                    <FadeIn>
+                        <div className={`flex items-center ${snapClasses}`}>
+                            <svg width="100%" height="100%" viewBox="0 0 180 20">
+                                <text x="50%" y="65%" textAnchor="middle" alignmentBaseline="middle" className="font-bergen font-bold uppercase">
+                                    What I Do
+                                </text>
+                            </svg>
+                        </div>
+                    </FadeIn>
+                    <div className={`flex items-center ${snapClasses}`}  >
+                        <Grid gridItems={services} />
                     </div>
-
                 </div>
-
 
                 {/* Projects */}
-                <div className="space-y-10 flex flex-col items-center">
-                    <AnimatedWords title="Selected Projects" titleClasses="uppercase font-bold text-4xl md:text-6xl lg:text-7xl" />
-                    <Board posts={projects} />
+                <div className="space-y-12">
+                    <FadeIn>
+                        <div className={`flex items-center ${snapClasses}`}  >
+                            <svg width="100%" height="100%" viewBox="0 0 180 20">
+                                <text x="50%" y="65%" textAnchor="middle" alignmentBaseline="middle" className="font-bergen font-bold uppercase">
+                                    Selected Work
+                                </text>
+                            </svg>
+
+                        </div>
+                    </FadeIn>
+
+                    <FadeIn>
+                        <div className={`min-h-full lg:snap-start lg:snap-always lg:scroll-my-8`}  >
+                            <Board posts={projects} />
+                        </div>
+                    </FadeIn>
+
                 </div>
 
-            </div>
+
+
+            </div >
         </>
 
     )

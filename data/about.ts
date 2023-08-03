@@ -29,7 +29,7 @@ export const services: GridItemPayload[] = [
 
 export const projects: PostPayload[] = [
     {
-        title: "Case Study: Holsinger Lab",
+        title: "Editorial: Holsinger Lab",
         body: `The Holsinger Lab website is designed to showcase ground-breaking research in neuroscience at the prestigious University of Sydney. The lab recognised the need for an effective and user-friendly website to share their research with the world. With limited tech capabilities and resources, the lab needed a modern solution. 
         \n
         To accomodate their needs, I developed a fast and responsive website that incorporates content from a headless CMS. By separating content and code, this solution empowers all staff members to easily edit and manage the website.
@@ -75,3 +75,33 @@ export const projects: PostPayload[] = [
                                 <Image src={TailwindIcon} alt={"Tailwind CSS logo"} className="h-8 w-full" />
                             </div>
                         </div> */}
+
+
+                        {/* Introduction */}
+                {/* <div className="space-y-8">
+                    <div className="flex justify-center items-center">
+                        <Image src={profile} alt={""} className="border-2 md:w-1/2 border-border rounded-full" />
+                    </div>
+                    <p className="">
+                        My journey in the world of web began with the drive to create user-centric experiences that bridge the gap between design and functionality.
+                        With a background in physics, I bring a unique perspective to problem-solving and crafting intuitive user interfaces.
+                        My mission is to leverage cutting-edge technologies to create elegant, scalable web solutions.
+                    </p>
+                </div> */}
+                {/* TECH STACK */}
+                {/* <div className="space-y-10 flex flex-col items-center w-full overflow-x-hidden snap-none">
+                    <svg width="100%" height="100%" viewBox="0 0 180 24">
+                        <text x="50%" y="65%" textAnchor="middle" alignmentBaseline="middle" className="font-bergen font-bold uppercase">
+                            Ahead of the Curve
+                        </text>
+                    </svg>
+                    <p>I swear by the power of Next.js and Sanity to build future-proof websites with an emphasis on design accuracy,
+                        scalablility and maintainability. Embracing the Jamstack architecture,
+                        I create web experiences decoupled from business logic.</p>
+                    <div className="px-[-1.25rem] md:px-[-2.5rem] lg:px-[-3rem]">
+                        {useMediaQuery(1280)
+                            ? <ScrollAnimation />
+                            : <ScrollFadeIn />
+                        }
+                    </div>
+                </div> */}

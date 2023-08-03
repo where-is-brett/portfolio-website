@@ -23,7 +23,8 @@ const ContactPage = ({ isOpen, setIsOpen }: ContactPageProps) => {
             leave="transition duration-700 ease-out transform"
             leaveFrom="translate-y-0"
             leaveTo="translate-y-full"
-            className={'fixed z-50 p-0 m-0 top-0 bottom-0 left-0 right-0 h-full w-full overflow-y-scroll overflow-x-hidden bg-bg-primary md:flex md:overflow-hidden md:border-2 md:border-border'}
+            className={`fixed z-40 p-0 m-0 top-0 bottom-0 left-0 right-0 h-full w-full font-raleway font-[500]
+            overflow-y-scroll overflow-x-hidden bg-bg-primary lg:flex lg:overflow-hidden lg:border-2 lg:border-border`}
         >
             <CloseButton handleClose={handleClose} />
             <ContactForm />

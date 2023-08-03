@@ -1,20 +1,34 @@
 import Navbar from '@/components/global/Navbar'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Raleway, Noto_Sans_Cypriot } from 'next/font/google'
+import localFont from 'next/font/local'
+import { Raleway } from 'next/font/google'
 
 const raleway = Raleway({ 
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-raleway',
 })
-const archivo = Noto_Sans_Cypriot({
-  weight: ['400'],
-  subsets: ['cypriot'],
-  display: 'swap',
-  variable: '--font-archivo',
+
+const bergen = localFont({
+  src: [
+    {
+      path: '../fonts/BergenSans-Regular.otf',
+      weight: 'normal',
+    },
+  ],
+  variable: '--font-bergen',
 })
 
+const redtone = localFont({
+  src: [
+    {
+      path: '../fonts/Redtone-Regular.woff2',
+      weight: 'normal',
+    },
+  ],
+  variable: '--font-redtone',
+})
 
 export const metadata: Metadata = {
   title: 'Home',
@@ -25,12 +39,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={`${archivo.className} ${raleway.variable} ${archivo.variable}`}>
+    <html lang="en" className="snap-mandatory lg:snap-y lg:scroll-py-8">
+      <body className={`${raleway.className} ${raleway.variable} ${bergen.variable} ${redtone.variable}`}>
         <nav>
           <Navbar breakpoint={1024} />
         </nav>
-        <main className='mt-14 lg:mt-0 lg:mb-14 p-5 lg:p-10'>
+        <main className='pb-12 lg:py-[4.5rem] px-6 md:px-10 lg:px-16 '>
           {children}
         </main>
       </body>

@@ -36,47 +36,33 @@ const introPictureVariants: Variants = {
     },
 };
 
-interface ContentPayload {
-    title: string
-    description?: string
-    images: StaticImport[]
-}
-
-const content = {
-    title: 'Ahead of the Curve',
-    description: `I swear by the power of Next.js and Sanity CMS to streamline my front-end workflow.
-    These tools, coupled with an eye for design, allow me to create visually appealing and highly functional web applications.`,
-    images: [ReactIcon, NextIcon, SanityIcon, TailwindIcon]
-}
-
 const ScrollFadeIn = (
     // { content }: { content: ContentPayload }
 ) => {
 
     return (
-        <div className="space-y-12 lg:space-y-0 lg:space-x-16 lg:flex">
-            <motion.header
-                className='flex gap-x-8 justify-center lg:justify-end w-full'
+        <div className="space-y-0 space-x-16 flex w-screen px-0 mx-0">
+            <motion.div
+                className='flex gap-x-10 justify-end w-full'
                 initial="hide"
                 whileInView="show"
                 exit="hide"
                 variants={introHeaderVariants}>
 
+                <Image src={SanityIcon} alt="Sanity icon" className="h-16 w-48" />
+                <Image src={NextIcon} alt="Next icon" className="h-16 w-48" />
                 
-                <Image src={SanityIcon} alt="Sanity icon" className="h-12 w-36 md:h-16 md:w-48" />
-                <Image src={NextIcon} alt="Next icon" className="h-12 w-36 md:h-16 md:w-48" />
-                
-            </motion.header>
+            </motion.div>
             <motion.div
-                className="flex gap-x-16 justify-center lg:justify-start w-full"
+                className="flex gap-x-8 justify-start w-full"
                 initial="hide"
                 whileInView="show"
                 exit="hide"
                 variants={introPictureVariants}>
 
               
-                <Image src={VercelIcon} alt="Vercel icon" className="h-12 w-36 md:h-16 md:w-48" />
-                <Image src={AWSIcon} alt="AWS icon" className="h-12 w-36 md:h-16 md:w-48" />
+                <Image src={VercelIcon} alt="Vercel icon" className="h-16 w-48" />
+                <Image src={AWSIcon} alt="AWS icon" className="h-16 w-48" />
                 
                 
             </motion.div>

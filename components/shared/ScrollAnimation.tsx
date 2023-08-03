@@ -50,15 +50,15 @@ export function ScrollAnimation() {
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({ target: ref });
 
-    const x1 = useParallax(scrollYProgress, -700, 400);
-    const x2 = useParallax(scrollYProgress, -700, 400);
-    const x3 = useReverseParallax(scrollYProgress, -700, 400);
-    const x4 = useReverseParallax(scrollYProgress, -700, 400);
+    const x1 = useParallax(scrollYProgress, -400, 400);
+    const x2 = useParallax(scrollYProgress, -400, 400);
+    const x3 = useReverseParallax(scrollYProgress, -400, 400);
+    const x4 = useReverseParallax(scrollYProgress, -400, 400);
 
 
     return (
         <div
-            className="h-full w-full flex flex-col items-center justify-center gap-12 lg:p-16"
+            className="h-full w-100 flex flex-col items-center justify-center gap-12"
         >
             <div className="flex items-center justify-between gap-16">
                 <ParallaxContainer className="" parallax={x1}>

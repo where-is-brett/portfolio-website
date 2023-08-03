@@ -9,7 +9,8 @@ module.exports = {
     extend: {
       fontFamily: {
         raleway: ['var(--font-raleway)'],
-        archivo: ['var(--font-archivo)'],
+        bergen: ['var(--font-bergen)'],
+        redtone: ['var(--font-redtone)'],
       },
       colors: {
         'primary': '#222222',
