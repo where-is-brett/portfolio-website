@@ -17,20 +17,12 @@ const Page = () => {
             <div className="space-y-20 text-base lg:text-lg">
 
                 <div className={`w-full h-[100vh] flex flex-col justify-center ${snapClasses}`}>
-                    <FadeInStagger className="space-y-16">
-                        <FadeIn>
-                            <svg width="100%" height="100%" viewBox="0 0 180 20" className="">
-                                <text x="50%" y="65%" textAnchor="middle" alignmentBaseline="middle" className="font-bergen font-bold uppercase">
-                                    Hello,
-                                </text>
-                            </svg>
+                    <FadeInStagger className="space-y-20">
+                        <FadeIn transition={{ duration: 1 }}>
+                            <h1 className="font-bergen font-bold uppercase text-6xl lg:text-8xl text-center">Hello,</h1>
                         </FadeIn>
-                        <FadeIn>
-                            <svg width="100%" height="100%" viewBox="0 0 180 20" className="">
-                                <text x="50%" y="65%" textAnchor="middle" alignmentBaseline="middle" className="font-bergen font-bold uppercase">
-                                    {`I'm Brett`}
-                                </text>
-                            </svg>
+                        <FadeIn transition={{ duration: 1 }}>
+                            <h1 className="font-bergen font-bold uppercase text-6xl lg:text-8xl text-center">{`I'm Brett`}</h1>
                         </FadeIn>
                     </FadeInStagger>
                 </div>
@@ -52,12 +44,8 @@ const Page = () => {
                 {/* Services */}
                 <div className="space-y-12">
                     <FadeIn>
-                        <div className={`flex items-center ${snapClasses}`}>
-                            <svg width="100%" height="100%" viewBox="0 0 180 20">
-                                <text x="50%" y="65%" textAnchor="middle" alignmentBaseline="middle" className="font-bergen font-bold uppercase">
-                                    What I Do
-                                </text>
-                            </svg>
+                        <div className={`flex justify-center items-center ${snapClasses}`}>
+                            <h1 className="font-bergen font-bold uppercase text-6xl lg:text-8xl text-center">What I Do</h1>
                         </div>
                     </FadeIn>
                     <div className={`flex items-center ${snapClasses}`}  >
@@ -68,13 +56,8 @@ const Page = () => {
                 {/* Projects */}
                 <div className="space-y-12">
                     <FadeIn>
-                        <div className={`flex items-center ${snapClasses}`}  >
-                            <svg width="100%" height="100%" viewBox="0 0 180 20">
-                                <text x="50%" y="65%" textAnchor="middle" alignmentBaseline="middle" className="font-bergen font-bold uppercase">
-                                    Selected Work
-                                </text>
-                            </svg>
-
+                        <div className={`flex justify-center items-center ${snapClasses}`} >
+                            <h1 className="font-bergen font-bold uppercase text-6xl lg:text-8xl text-center">Selected Work</h1>
                         </div>
                     </FadeIn>
 
