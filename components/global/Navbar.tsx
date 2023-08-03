@@ -1,25 +1,27 @@
 'use client'
 import React, { useState, useEffect, useRef } from "react"
 import ContactPage from "../pages/contact/ContactPage"
-import useMediaQuery from "@/utils/useMediaQuery"
 import DesktopNavbar from "./DesktopNavbar"
 import MobileNavbar from "./MobileNavbar"
 
 
 const Navbar = ({ breakpoint }: { breakpoint: number }) => {
 
-    const isSmallScreen = useMediaQuery(breakpoint)
+    
+    
     // Check client-side or server-side
     const [isBrowser, setIsBrowser] = useState(false)
-
+    const [isSmallScreen, setIsSmallScreen] = useState(false)
+    
     const dropdownRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
         setIsBrowser(true)
+        setIsSmallScreen(window.innerWidth <= breakpoint)
         // Monitor window size
         const handleResize = () => {
             // Close menu when entering medium viewport
-            window.innerWidth >= breakpoint && setIsMenuOpen(false);
+            window.innerWidth > breakpoint && setIsMenuOpen(false);
         };
         window.addEventListener('resize', handleResize); // Listen for resize events
 
