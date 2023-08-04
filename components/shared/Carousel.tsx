@@ -71,6 +71,7 @@ const Carousel: React.FC<CarouselProps> = ({ imageURLs }) => {
               width={625}
               height={512}
               draggable={false}
+              priority
             />
           </motion.div>
         </AnimatePresence>
