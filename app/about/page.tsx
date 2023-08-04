@@ -33,22 +33,23 @@ const Page = () => {
           </FadeInStagger>
         </div>
 
+        {/* Profile */}
         <div
           className={`flex h-[100vh] flex-col items-center justify-center gap-16 lg:flex-row lg:px-20 ${snapClasses}`}
         >
           <OpacityTransitionImage
             src={profile}
             alt={"Brett's profile picture"}
-            className='z-0 max-h-[40vh] w-full max-w-[50vw] rounded-full border-2 border-border lg:max-h-[60vh] lg:max-w-[45vw]'
+            className='z-0 w-[50vw] max-w-[400px] rounded-full border-2 border-border'
           />
           <FadeIn>
             <p className='leading-8'>
-              <Balancer ratio={0.7}>
+              {/* <Balancer ratio={0.7}> */}
                 My journey began with the drive to create user-centric
                 experiences that bridge the gap between design and
                 functionality. I specialise in buidling jamstack websites where
                 business logic is decoupled from web experience.
-              </Balancer>
+              {/* </Balancer> */}
             </p>
           </FadeIn>
         </div>
