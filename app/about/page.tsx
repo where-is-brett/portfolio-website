@@ -1,4 +1,3 @@
-// 'use client'
 import { Metadata } from 'next';
 import Board from '@/components/shared/board/Board';
 import { FadeIn, FadeInStagger } from '@/components/shared/FadeIn';
