@@ -1,3 +1,4 @@
+"use client"
 import { GridItemPayload } from "@/types";
 import useMediaQuery from "@/utils/useMediaQuery";
 import Image from "next/image"

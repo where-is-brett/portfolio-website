@@ -1,7 +1,7 @@
 import { Transition } from "@headlessui/react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import Logo from "@/public/logo.svg"
+import Logo from "@/public/logo/logo.svg"
 import Image from "next/image";
 
 

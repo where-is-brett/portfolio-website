@@ -53,9 +53,9 @@ const Navbar = ({ breakpoint }: { breakpoint: number }) => {
     }
 
     const scrollToTop = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-        event.preventDefault();
-        if (!isBrowser) return;
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        event.preventDefault()
+        // if (!isBrowser) return
+        window.scrollTo({ top: 0, behavior: 'smooth' })
     }
 
 

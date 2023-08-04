@@ -1,12 +1,18 @@
-'use client'
-import Board from "@/components/shared/board/Board";
+// 'use client'
+import { Metadata } from 'next'
+import Board from "@/components/shared/board/Board"
 import { FadeIn, FadeInStagger } from '@/components/shared/FadeIn'
-import { services, projects } from "@/data/about";
-import Grid from "@/components/shared/grid/Grid";
+import { services, projects } from "@/data/about"
+import Grid from "@/components/shared/grid/Grid"
 import { OpacityTransitionImage } from "@/components/shared/OpacityTransitionImage"
 import profile from "@/public/images/profile.jpg"
-import Balancer from "react-wrap-balancer";
+import Balancer from "react-wrap-balancer"
 
+ 
+export const metadata: Metadata = {
+  title: 'About',
+  description: `Brett builds visually stunning and performant websites. Ready to elevate your online presence? Tap in using the contact form.`,
+}
 
 const snapClasses = `lg:h-[100vh] lg:snap-center lg:snap-always`;
 
@@ -62,7 +68,7 @@ const Page = () => {
                     </FadeIn>
 
                     <FadeIn>
-                        <div className={`min-h-full lg:snap-start lg:snap-always lg:scroll-mb-8`} >
+                        <div className={`min-h-full lg:snap-start lg:snap-normal lg:scroll-mb-20`} >
                             <Board posts={projects} />
                         </div>
                     </FadeIn>
@@ -70,8 +76,6 @@ const Page = () => {
                     <div className={`lg:snap-start`} ></div>
 
                 </div>
-
-
 
             </div >
         </>
