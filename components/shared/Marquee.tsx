@@ -36,6 +36,7 @@ const ImageMarquee = () =>
               width={0}
               height={0}
               className='h-32 w-32 '
+              draggable={false}
             />
           ))}
         </motion.div>

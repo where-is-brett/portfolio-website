@@ -22,6 +22,7 @@ const Socials = () => {
             src={LinkedinIcon}
             alt='Linkedin logo'
             className='h-40 w-40 p-4'
+            draggable={false}
           />
         </a>
         <a
@@ -30,7 +31,12 @@ const Socials = () => {
           target='_blank'
           rel='noreferrer'
         >
-          <Image src={GithubIcon} alt='GitHub logo' className='h-40 w-40 p-4' />
+          <Image
+            src={GithubIcon}
+            alt='GitHub logo'
+            className='h-40 w-40 p-4'
+            draggable={false}
+          />
         </a>
         <a
           href='https://www.instagram.com/b._.rett/'
@@ -42,6 +48,7 @@ const Socials = () => {
             src={InstagramIcon}
             alt='Instagram Logo'
             className='h-40 w-40 p-4'
+            draggable={false}
           />
         </a>
         <a
@@ -54,6 +61,7 @@ const Socials = () => {
             src={FacebookIcon}
             alt='Facebook logo'
             className='h-40 w-40 p-4'
+            draggable={false}
           />
         </a>
       </div>

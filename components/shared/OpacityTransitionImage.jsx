@@ -22,7 +22,7 @@ export function OpacityTransitionImage(props) {
 
   return (
     <div ref={ref} className='group relative'>
-      <MotionImage alt='' style={{ filter }} {...props} />
+      <MotionImage alt='' style={{ filter }} {...props} draggable={false} />
     </div>
   );
 }

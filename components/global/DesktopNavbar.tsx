@@ -33,15 +33,15 @@ const DesktopNavbar = ({
         </Link>
       </div>
       <Link
-        href=''
+        href='#'
         onClick={scrollToTop}
         className='flex h-12 w-28 items-center justify-center border-x border-border active:bg-bg-secondary'
       >
-        <Image src={Logo} alt='logo' width={40} />
+        <Image src={Logo} alt='logo' width={40} draggable={false} />
       </Link>
       <div className='flex h-12 w-full border-l border-border'>
         <Link
-          href=''
+          href='#'
           onClick={handleContactClick}
           className='h-[3rem] w-full text-center text-2xl leading-[3rem] text-primary'
         >

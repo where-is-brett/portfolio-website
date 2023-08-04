@@ -55,7 +55,6 @@ export const metadata: Metadata = {
   viewport: {
     width: 'device-width',
     initialScale: 1,
-    maximumScale: 1,
   },
 
   openGraph: {
@@ -66,7 +65,7 @@ export const metadata: Metadata = {
   },
 
   robots: {
-    index: false,
+    index: true,
     follow: true,
     nocache: true,
     googleBot: {

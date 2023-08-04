@@ -20,10 +20,11 @@ const Grid = ({ gridItems }: { gridItems: GridItemPayload[] }) => {
                       src={item.icon}
                       alt={item.title}
                       className='my-0 w-12 flex-shrink-0'
+                      draggable={false}
                     />
-                    <h3 className='mb-2 font-raleway text-xl font-bold md:text-2xl'>
+                    <h2 className='mb-2 font-raleway text-xl font-bold md:text-2xl'>
                       {item.title}
-                    </h3>
+                    </h2>
                   </div>
                   <p className=''>{item.description}</p>
                 </div>
@@ -33,12 +34,13 @@ const Grid = ({ gridItems }: { gridItems: GridItemPayload[] }) => {
                     src={item.icon}
                     alt={item.title}
                     className='my-auto w-16 flex-shrink-0'
+                    draggable={false}
                   />
                   <div>
-                    <h3 className='mb-2 font-raleway text-xl font-bold md:text-2xl'>
+                    <h2 className='mb-2 font-raleway text-xl font-bold md:text-2xl'>
                       {item.title}
-                    </h3>
-                    <p className=''>{item.description}</p>
+                    </h2>
+                    <p>{item.description}</p>
                   </div>
                 </div>
               )}

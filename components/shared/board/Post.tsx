@@ -29,6 +29,7 @@ const Post = ({ title, body, imageURLs, link }: PostProps) => {
                 width={0}
                 height={0}
                 layout='responsive'
+                draggable={false}
               />
             ) : (
               <Carousel imageURLs={imageURLs} />

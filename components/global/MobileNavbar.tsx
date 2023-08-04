@@ -29,10 +29,11 @@ const MobileNavbar = ({
       <div className='fixed left-0 right-0 top-0 z-30 h-14 border-2 border-primary bg-bg-primary'>
         <div className='absolute left-4 w-full py-3'>
           <Link href='#' onClick={scrollToTop}>
-            <Image src={Logo} alt='logo' height={28} />
+            <Image src={Logo} alt='logo' height={28} draggable={false} />
           </Link>
         </div>
         <button
+          title="Dropdown menu"
           type='button'
           onClick={handleMenuClick}
           className='absolute bottom-2 right-4 top-2 m-auto h-6 w-6 border-0 bg-transparent p-0'
@@ -69,9 +70,8 @@ const MobileNavbar = ({
             onClick={() => {
               setIsContactOpen(false);
             }}
-            className={`h-[3rem] w-full border-2 border-t-0 border-border text-center text-2xl leading-[3rem] text-primary ${
-              pathname === '/about' && 'bg-bg-secondary'
-            }`}
+            className={`h-[3rem] w-full border-2 border-t-0 border-border text-center text-2xl leading-[3rem] text-primary ${pathname === '/about' && 'bg-bg-secondary'
+              }`}
           >
             ABOUT
           </Link>

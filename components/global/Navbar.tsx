@@ -16,6 +16,7 @@ const Navbar = ({ breakpoint }: { breakpoint: number }) => {
     setIsSmallScreen(window.innerWidth <= breakpoint);
     // Monitor window size
     const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= breakpoint);
       // Close menu when entering medium viewport
       window.innerWidth > breakpoint && setIsMenuOpen(false);
     };
@@ -57,7 +58,6 @@ const Navbar = ({ breakpoint }: { breakpoint: number }) => {
     event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
   ) => {
     event.preventDefault();
-    // if (!isBrowser) return
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 

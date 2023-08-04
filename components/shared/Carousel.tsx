@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence, PanInfo } from 'framer-motion';
 import { wrap } from '@popmotion/popcorn';
+import Image from 'next/image';
 
 interface CarouselProps {
   imageURLs: string[];
@@ -38,7 +39,7 @@ const Carousel: React.FC<CarouselProps> = ({ imageURLs }) => {
 
   const dragEndHandler = (dragInfo: PanInfo) => {
     const draggedDistance = dragInfo.offset.x;
-    const swipeThreshold = 50;
+    const swipeThreshold = 30;
     if (draggedDistance > swipeThreshold) {
       swipeToImage(-1);
     } else if (draggedDistance < -swipeThreshold) {
@@ -48,14 +49,10 @@ const Carousel: React.FC<CarouselProps> = ({ imageURLs }) => {
 
   return (
     <div className='z-0 space-y-4'>
-      <div className='relative z-0 h-96 w-full overflow-hidden md:h-[512px]'>
+      <div className='relative z-0 w-full overflow-hidden h-[512px]'>
         <AnimatePresence initial={false} custom={direction}>
           <motion.div
             key={imageCount}
-            style={{
-              backgroundImage: `url(${imageURLs[activeImageIndex]})`,
-              willChange: `transform, opacity`,
-            }}
             custom={direction}
             variants={sliderVariants}
             initial='incoming'
@@ -66,8 +63,16 @@ const Carousel: React.FC<CarouselProps> = ({ imageURLs }) => {
             dragConstraints={{ left: 0, right: 0 }}
             dragElastic={1}
             onDragEnd={(_, dragInfo) => dragEndHandler(dragInfo)}
-            className='absolute h-full w-full bg-contain bg-center bg-no-repeat hover:cursor-grab active:cursor-grabbing'
-          />
+            className='absolute h-full w-full hover:cursor-grab active:cursor-grabbing flex items-center justify-center'
+          >
+            <Image 
+              src={imageURLs[activeImageIndex]} 
+              alt={`Carousel image item ${activeImageIndex}`} 
+              width={625}
+              height={512}
+              draggable={false}
+            />
+          </motion.div>
         </AnimatePresence>
       </div>
 
@@ -76,7 +81,7 @@ const Carousel: React.FC<CarouselProps> = ({ imageURLs }) => {
           className='block h-fit w-fit text-primary'
           onClick={() => swipeToImage(-1)}
         >
-          <svg
+          <svg 
             xmlns='http://www.w3.org/2000/svg'
             fill='none'
             viewBox='0 0 24 24'
