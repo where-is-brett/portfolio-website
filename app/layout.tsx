@@ -59,7 +59,6 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: 'Brett Yang',
     description: 'Web development services Northern Beaches, Sydney. Elevate your online presence together and create visually captivating, high-performing websites!',
     siteName: 'Brett Yang',
     locale: 'en_AU',
