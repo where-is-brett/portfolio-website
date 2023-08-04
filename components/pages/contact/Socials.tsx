@@ -15,28 +15,28 @@ const Socials = () => {
                 <a
                     href="https://www.linkedin.com/in/brettyang/"
                     className="flex flex-col items-center justify-center transition duration-500 ease transform hover:scale-110"
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                 >
                     <Image src={LinkedinIcon} alt="Linkedin logo" className="w-40 h-40 p-4" />
                 </a>
                 <a
                     href="https://github.com/where-is-brett"
                     className="flex flex-col items-center justify-center transition duration-500 ease transform hover:scale-110 "
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                 >
                     <Image src={GithubIcon} alt="GitHub logo" className="w-40 h-40 p-4" />
                 </a>
                 <a
                     href="https://www.instagram.com/b._.rett/"
                     className="flex flex-col items-center justify-center transition duration-500 ease transform hover:scale-110"
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                 >
                     <Image src={InstagramIcon} alt="Instagram Logo" className="w-40 h-40 p-4" />
                 </a>
                 <a
                     href="https://www.facebook.com/brettyang17"
                     className="flex flex-col items-center justify-center transition duration-500 ease transform hover:scale-110"
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                 >
                     <Image src={FacebookIcon} alt="Facebook logo" className="w-40 h-40 p-4" />
                 </a>
