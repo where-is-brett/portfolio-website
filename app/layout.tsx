@@ -94,7 +94,7 @@ export default function RootLayout({
         <nav>
           <Navbar breakpoint={1024} />
         </nav>
-        <main className='px-6 pb-12 md:px-10 lg:px-16 lg:py-[4.5rem] '>
+        <main className='px-6 pb-12 md:px-10 lg:px-16 lg:py-[4.5rem] bg-bg-primary text-primary'>
           {children}
         </main>
       </body>
