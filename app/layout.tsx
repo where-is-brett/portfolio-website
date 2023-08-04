@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     default: 'Brett Yang', // a default is required when creating a template
   },
   description:
-    'Web development services Northern Beaches, Sydney. Elevate your online presence together and create visually captivating, high-performing websites!',
+    'Web development services Northern Beaches, Sydney. Elevate your online presence together and create visually captivating, performant websites!',
   keywords: [
     'Web development',
     'Web design',
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    description: 'Web development services Northern Beaches, Sydney. Elevate your online presence together and create visually captivating, high-performing websites!',
+    description: 'Web development services Northern Beaches, Sydney. Elevate your online presence together and create visually captivating, performant websites!',
     siteName: 'Brett Yang',
     locale: 'en_AU',
     type: 'website',
