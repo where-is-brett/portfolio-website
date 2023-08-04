@@ -118,7 +118,7 @@ const ContactForm = () => {
               onChange={handleChange}
               required
               disabled={status.submitting}
-              className='mb-2 block w-full border-2 border-border px-3 py-1 outline-none hover:border-border-hover focus:border-border-selected'
+              className='mb-2 block w-full border-2 border-border px-3 py-1 outline-none hover:border-border-hover focus:border-border-selected bg-bg-alternate'
             />
             <label htmlFor='email'>EMAIL</label>
             <input
@@ -128,13 +128,13 @@ const ContactForm = () => {
               onChange={handleChange}
               required
               disabled={status.submitting}
-              className='mb-2 block w-full border-2 border-border px-3 py-1 outline-none hover:border-border-hover focus:border-border-selected'
+              className='mb-2 block w-full border-2 border-border px-3 py-1 outline-none hover:border-border-hover focus:border-border-selected bg-bg-alternate'
             />
             <label htmlFor='message'>MESSAGE</label>
             <textarea
               placeholder=''
               name='message'
-              className='mb-4 block h-[30vh] max-h-[40vh] w-full overflow-y-auto border-2 border-border px-3 py-1 outline-none hover:border-border-hover focus:border-border-selected lg:max-w-[45vw]'
+              className='mb-4 block h-[30vh] max-h-[40vh] w-full overflow-y-auto border-2 border-border px-3 py-1 outline-none hover:border-border-hover focus:border-border-selected lg:max-w-[45vw] bg-bg-alternate'
               id='message'
               value={inputs.message}
               onChange={handleChange}

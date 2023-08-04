@@ -24,7 +24,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-  background-color: #fafafa;
+  background-color: #FDF1E7;
 }
 
 /* Reset input field appearances */
