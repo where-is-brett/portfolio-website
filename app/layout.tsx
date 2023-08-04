@@ -1,14 +1,14 @@
-import Navbar from '@/components/global/Navbar'
-import './globals.css'
-import { Metadata } from 'next'
-import localFont from 'next/font/local'
-import { Raleway } from 'next/font/google'
+import Navbar from '@/components/global/Navbar';
+import './globals.css';
+import { Metadata } from 'next';
+import localFont from 'next/font/local';
+import { Raleway } from 'next/font/google';
 
 const raleway = Raleway({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-raleway',
-})
+});
 
 const bergen = localFont({
   src: [
@@ -18,7 +18,7 @@ const bergen = localFont({
     },
   ],
   variable: '--font-bergen',
-})
+});
 
 const redtone = localFont({
   src: [
@@ -28,15 +28,23 @@ const redtone = localFont({
     },
   ],
   variable: '--font-redtone',
-})
+});
 
 export const metadata: Metadata = {
   title: {
     template: '%s | Brett Yang',
     default: 'Brett Yang', // a default is required when creating a template
   },
-  description: 'Web development services Northern Beaches, Sydney. Elevate your online presence together and create visually captivating, high-performing websites!',
-  keywords: ['Web development', 'Web design', 'Northern Beaches', 'e-commerce website', 'Next.js', 'React'],
+  description:
+    'Web development services Northern Beaches, Sydney. Elevate your online presence together and create visually captivating, high-performing websites!',
+  keywords: [
+    'Web development',
+    'Web design',
+    'Northern Beaches',
+    'e-commerce website',
+    'Next.js',
+    'React',
+  ],
   creator: 'Brett Yang',
 
   themeColor: [
@@ -73,20 +81,26 @@ export const metadata: Metadata = {
     },
   },
 
-  manifest: '/manifest.json'
-}
+  manifest: '/manifest.json',
+};
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en" className="snap-mandatory lg:snap-y lg:scroll-py-8">
-      <body className={`${raleway.className} ${raleway.variable} ${bergen.variable} ${redtone.variable}`}>
+    <html lang='en' className='snap-mandatory lg:snap-y lg:scroll-py-8'>
+      <body
+        className={`${raleway.className} ${raleway.variable} ${bergen.variable} ${redtone.variable}`}
+      >
         <nav>
           <Navbar breakpoint={1024} />
         </nav>
-        <main className='pb-12 lg:py-[4.5rem] px-6 md:px-10 lg:px-16 '>
+        <main className='px-6 pb-12 md:px-10 lg:px-16 lg:py-[4.5rem] '>
           {children}
         </main>
       </body>
     </html>
-  )
+  );
 }

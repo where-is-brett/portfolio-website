@@ -1,14 +1,14 @@
-import { StaticImport } from "next/dist/shared/lib/get-img-props"
+import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 
 export interface GridItemPayload {
-    icon: StaticImport
-    title: string
-    description: string
+  icon: StaticImport;
+  title: string;
+  description: string;
 }
 
 export interface PostPayload {
-    title: string
-    body: string
-    imageURLs?: string[]
-    link?: string
+  title: string;
+  body: string;
+  imageURLs?: string[];
+  link?: string;
 }

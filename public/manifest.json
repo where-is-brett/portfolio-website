@@ -1,20 +1,20 @@
 {
-    "name": "Brett Yang",
-    "theme_color": "#FAFAFA",
-    "background_color": "#FAFAFA",
-    "icons": [
-        {
-            "src": "/logo/logo_192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "/logo/logo_512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
-    ],
-    "display": "standalone",
-    "scope": "/",
-    "start_url": "/"
+  "name": "Brett Yang",
+  "theme_color": "#FAFAFA",
+  "background_color": "#FAFAFA",
+  "icons": [
+    {
+      "src": "/logo/logo_192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo/logo_512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/"
 }
