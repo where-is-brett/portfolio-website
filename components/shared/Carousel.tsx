@@ -80,6 +80,7 @@ const Carousel: React.FC<CarouselProps> = ({ imageURLs }) => {
         <button
           className='block h-fit w-fit text-primary'
           onClick={() => swipeToImage(-1)}
+          title='Swipe left'
         >
           <svg 
             xmlns='http://www.w3.org/2000/svg'
@@ -99,6 +100,7 @@ const Carousel: React.FC<CarouselProps> = ({ imageURLs }) => {
         <button
           className='block h-fit w-fit text-primary'
           onClick={() => swipeToImage(1)}
+          title='Swipe right'
         >
           <svg
             xmlns='http://www.w3.org/2000/svg'
