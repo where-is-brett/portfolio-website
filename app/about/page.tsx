@@ -17,7 +17,7 @@ const snapClasses = `lg:h-[100vh] lg:snap-center lg:snap-always`;
 const Page = () => {
   return (
     <>
-      <div className='space-y-20 text-base lg:text-lg'>
+      <div className='space-y-28 text-base lg:text-lg'>
         <div
           className={`flex h-[100vh] w-full flex-col justify-center ${snapClasses}`}
         >
@@ -42,7 +42,7 @@ const Page = () => {
             className='z-0 max-h-[40vh] w-full max-w-[50vw] rounded-full border-2 border-border lg:max-h-[60vh] lg:max-w-[45vw]'
           />
           <FadeIn>
-            <p className='font-medium leading-8'>
+            <p className='leading-8'>
               <Balancer ratio={0.7}>
                 My journey began with the drive to create user-centric
                 experiences that bridge the gap between design and
