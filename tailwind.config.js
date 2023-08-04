@@ -14,8 +14,8 @@ module.exports = {
       },
       colors: {
         'primary': '#000000',
-        'bg-primary': '#f5f2eb',
-        'bg-secondary': '#FDC827',
+        'bg-primary': '#F7F6F2',
+        'bg-secondary': '#F6EC55',
         'bg-alternate': '#FAF7F4',
         'border': '#000000',
         'border-hover': '#757471',
