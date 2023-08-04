@@ -68,12 +68,12 @@ const Page = () => {
                     </FadeIn>
 
                     <FadeIn>
-                        <div className={`min-h-full lg:snap-start lg:snap-normal lg:scroll-mb-20`} >
+                        <div className={`min-h-full lg:snap-start lg:snap-normal`} >
                             <Board posts={projects} />
                         </div>
                     </FadeIn>
 
-                    <div className={`lg:snap-start`} ></div>
+                    <div className={`lg:snap-start lg:scroll-mb-20`} ></div>
 
                 </div>
 
