@@ -48,8 +48,8 @@ export const metadata: Metadata = {
   creator: 'Brett Yang',
 
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#FDF1E7' },
-    { media: '(prefers-color-scheme: dark)', color: '#FDF1E7' },
+    { media: '(prefers-color-scheme: light)', color: '#F7F6F2' },
+    { media: '(prefers-color-scheme: dark)', color: '#F7F6F2' },
   ],
 
   viewport: {
