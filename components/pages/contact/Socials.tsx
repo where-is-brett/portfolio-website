@@ -7,7 +7,7 @@ import GithubIcon from '@/public/icons/github.svg';
 const Socials = () => {
   return (
     <div
-      className="bg-[url('/images/overlay.svg') flex h-screen w-full flex-col flex-wrap items-center justify-center border-2
+      className="flex h-screen w-full flex-col flex-wrap items-center justify-center border-2
             border-t-0
             border-border lg:min-w-[48vw] lg:border-0 lg:border-l"
     >
