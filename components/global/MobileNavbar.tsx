@@ -69,6 +69,7 @@ const MobileNavbar = ({
             href='/about'
             onClick={() => {
               setIsContactOpen(false);
+              handleMenuClick();
             }}
             className={`h-[3rem] w-full border-2 border-t-0 border-border text-center text-2xl leading-[3rem] text-primary ${pathname === '/about' && 'bg-bg-secondary'
               }`}
